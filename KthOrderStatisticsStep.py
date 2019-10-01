@@ -33,21 +33,23 @@ def ArrayChunk(array,left,right):
 
 def KthOrderStatisticsStep(array,low,high,K):
 #Основная ф-ция
-    i=ArrayChunk(array,low,high)
+    N=ArrayChunk(array,low,high)
     res=[]
-    if K==i:
+    if K==N:
         res.append(low)
         res.append(high)
         return res
-    elif i<K:
-        return KthOrderStatisticsStep(array,i+1,high,K)
-    elif i>K:
-        return KthOrderStatisticsStep(array,low,i-1,K)
+    elif N<K:
+        return KthOrderStatisticsStep(array,N+1,high,K)
+    elif N>K:
+        return KthOrderStatisticsStep(array,low,N-1,K)
 
     
 
 """
-a=[102,10,44,35,1,90,5]
-print(KthOrderStatisticsStep(a,0,6,3))
+a=[5,6,7,4,1,2,3]
+print(ArrayChunk(a,0,6))
+print(a)
+print(KthOrderStatisticsStep(a,0,6,0))
 print(a)
 """
