@@ -40,16 +40,21 @@ def KthOrderStatisticsStep(array,low,high,K):
         res.append(high)
         return res
     elif N<K:
-        return KthOrderStatisticsStep(array,N+1,high,K)
+        res.append(N+1)
+        res.append(high)
+        return res
     elif N>K:
-        return KthOrderStatisticsStep(array,low,N-1,K)
+        res.append(low)
+        res.append(N-1)
+        return res
 
     
 
-"""
+
 a=[5,6,7,4,1,2,3]
+"""
 print(ArrayChunk(a,0,6))
 print(a)
+"""
 print(KthOrderStatisticsStep(a,0,6,0))
 print(a)
-"""
