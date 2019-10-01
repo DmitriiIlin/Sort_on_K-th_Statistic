@@ -50,12 +50,3 @@ def KthOrderStatisticsStep(array,low,high,K):
 
     
 
-"""
-a=[5,6,7,4,1,2,3]
-
-print(ArrayChunk(a,0,6))
-print(a)
-
-print(KthOrderStatisticsStep(a,0,6,0))
-print(a)
-"""
